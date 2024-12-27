@@ -8,7 +8,7 @@ We’ve selected ten methods for you to implement and, in implementing each meth
  - Implement our game plan
  - Test our code to ensure it works as expected
 
-### Implement _.clamp()
+###  1 - Implement _.clamp()
 
 #### Specify 
 The first method we will implement is .clamp(). Read the explanation and examples of the method in the linked documentation to get a sense of how the method should work.
