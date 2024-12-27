@@ -1,6 +1,17 @@
-const _ = {};
+const _ = {
+    
+//clamp()
+    clamp (number, lower, upper) {
+        const lowerClampedValue = Math.max(number, lower);
+        const clampedValue = Math.min(upper, lowerClampedValue);
+    return clampedValue;
+    }
+}
 
-//Implement _.clamp()
+console.log(_.clamp(12, -25, 36))
+
+
+
 
 
 
