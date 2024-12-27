@@ -100,4 +100,38 @@ Let’s implement our game plan in code.
  - Once you’ve finished implementing this method, save your code and move on to the next step to test it.
 
 #### Test 
-To test that our .words() method works as expected, run node test/words.js in your terminal. 
+To test that our .words() method works as expected, run node test/words.js in your terminal.
+
+### Implement _.pad().
+
+#### Specify
+Here is a summary of what your method should do:
+
+ - .pad() takes two arguments: a string and a length.
+ - .pad() adds spaces evenly to both sides of the string to make it reach the desired length.
+ - Extra padding is added to the end of the string if an odd amount of padding is required to reach the specified length.
+ - Your method does not need to accept the additional chars parameter; we will only add space characters to pad our string.
+When you’ve ideated a game plan for how to implement this functionality, move on to the next step to see how we plan to do it.
+
+#### Ideate
+ - Add the .pad() method to the lodash object including the appropriate parameters.
+ - Check to make sure the target length is longer than the current string length. If not, return the unpadded version of the string.
+ - Find the amount of padding to add to the start of the string by finding the difference between the target length and the string length, dividing by two, and rounding down the resulting number. We round down so that any uneven padding gets added to the end of the string, not the beginning, as specified in the instructions.
+ - Find the amount of padding to add to the end of the string by subtracting the string length and the starting padding length (calculated above) from the target length.
+ - Generate the padded string by adding the amount of starting padding and ending padding calculated above to each side of the current string.
+ - Return the padded version of the string.
+
+
+#### Implement
+Let’s implement our game plan in code.
+
+ - Add a method to our _ object called pad.
+ - Add two parameters to this method: string and length.
+ - Within the method, add an if statement that checks if length is shorter than or equal to string‘s length. If so, return string.
+ - Create a variable called startPaddingLength and set its value equal to the difference of length and string‘s length, divided by 2, and rounded down by using Math.floor().
+ - Create a variable called endPaddingLength and set its value equal to length minus string‘s length minus startPaddingLength.
+ - Create a new variable called paddedString and set its value equal to the space character, ' ', repeated startPaddingLength number of times (using the string .repeat() method), concatenated with string, concatenated with the space character repeated endPaddingLength number of times.
+ - Return the value of paddedString from the method.
+
+#### Test 
+To test that our .pad() method works as expected, run node test/pad.js in your terminal. 
