@@ -37,7 +37,6 @@ Let’s implement our game plan in code.
 
 #### Test
 To test that our .clamp() method works as expected, run the test file for this method in your terminal.
-///
 
 ### 2 - Implement _.inRange()
 
