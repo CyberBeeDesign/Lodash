@@ -72,3 +72,32 @@ Here is a summary of the method:
 
 #### Test
 To test that our .inRange() method works as expected, run node test/in-range.js in your terminal.
+
+### Implement _.words()
+
+#### Specify 
+
+ - .words() takes one argument: a string.
+ - .words() splits the string into an array of words.
+ - A word is defined by a space-separated string of characters, so each space character, ' ', indicates the end of one word and the start of the next.
+ - Note: You may have noticed in the documentation that this function has a pattern parameter. Your method does not need to accept the additional pattern parameter, we will only split our string into words based on spaces.
+
+#### Ideate 
+This solution probably has the most potential solutions of the methods we have implemented thus far. We’ve opted to use a built-in JavaScript method to make this method as short and readable as possible.
+
+ - Add the .words() method to the lodash object including the appropriate parameters.
+ - Use the string .split() method to split the provided string on space characters into an array of words.
+ - Return the array of words generated in the previous step.
+ - Once you have tried implementing this game plan in code, move on to the next step to see how we do it.
+
+#### Implement 
+Let’s implement our game plan in code.
+
+ - Add a method to our _ object called words.
+ - Add one parameter to this method: string.
+ - Within the method, create a variable called words and set its value equal to string split on space characters ' ' using the .split() method.
+ - Return the value of words from the method.
+ - Once you’ve finished implementing this method, save your code and move on to the next step to test it.
+
+#### Test 
+To test that our .words() method works as expected, run node test/words.js in your terminal. 
