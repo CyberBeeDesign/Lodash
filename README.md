@@ -163,3 +163,37 @@ Let’s implement our game plan in code.
 
 #### Test
 To test that our .has() method works as expected, run node test/has.js in your terminal.
+
+### 6 - Implement _.invert()
+
+#### Specify
+
+Here is a summary of what your method should do:
+
+ - .invert() takes one argument: an object.
+ - .invert() iterates through each key / value pair in the provided object and swaps the key and value.
+ - In the case of duplicate values in the object, subsequent values will overwrite property assignments of previous values.
+
+
+#### Ideate
+Let’s come up with a game plan for implementing this method.
+
+ - Add the .invert() method to the lodash object including the appropriate parameters.
+ - Create a new object to represent our inverted object.
+ - Iterate through each key in the provided object.
+ - Set the original object’s value at that key to be a key on our inverted object and set the value of that key to be the original object’s key.
+ - Return the inverted object.
+
+#### Implement
+Let’s implement our game plan in code.
+
+ - Add a method to our _ object called invert.
+ - Add one parameter to this method: object.
+ - Within the method, create a variable called invertedObject and set its value equal to an empty object.
+ - Using a for ... in loop, iterate through each key in object.
+ - Within the loop, create a variable called originalValue and set it equal to the value at the current key in object.
+ - Still within the loop, set the value at originalValue on invertedObject to be the current key.
+ - Finally, outside of the loop, return the value of invertedObject from the method.
+
+#### Test
+To test that our .invert() method works as expected, run node test/invert.js in your terminal.
