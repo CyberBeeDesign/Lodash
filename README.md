@@ -73,7 +73,7 @@ Here is a summary of the method:
 #### Test
 To test that our .inRange() method works as expected, run node test/in-range.js in your terminal.
 
-### Implement _.words()
+### 3 - Implement _.words()
 
 #### Specify 
 
@@ -102,7 +102,7 @@ Let’s implement our game plan in code.
 #### Test 
 To test that our .words() method works as expected, run node test/words.js in your terminal.
 
-### Implement _.pad().
+### 4 - Implement _.pad().
 
 #### Specify
 Here is a summary of what your method should do:
@@ -136,7 +136,7 @@ Let’s implement our game plan in code.
 #### Test 
 To test that our .pad() method works as expected, run node test/pad.js in your terminal. 
 
-### Implement _.has()
+### 5 - Implement _.has()
 
 #### Specify 
 Here is a summary of what your method should do:
