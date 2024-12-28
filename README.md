@@ -73,7 +73,7 @@ Here is a summary of the method:
 #### Test
 To test that our .inRange() method works as expected, run node test/in-range.js in your terminal.
 
-### Implement _.words()
+### 3 - Implement _.words()
 
 #### Specify 
 
@@ -102,7 +102,7 @@ Let’s implement our game plan in code.
 #### Test 
 To test that our .words() method works as expected, run node test/words.js in your terminal.
 
-### Implement _.pad().
+### 4 - Implement _.pad().
 
 #### Specify
 Here is a summary of what your method should do:
@@ -135,3 +135,65 @@ Let’s implement our game plan in code.
 
 #### Test 
 To test that our .pad() method works as expected, run node test/pad.js in your terminal. 
+
+### 5 - Implement _.has()
+
+#### Specify 
+Here is a summary of what your method should do:
+ - .has() takes two arguments: an object and a key.
+ - .has() checks to see if the provided object contains a value at the specified key.
+ - .has() will return true if the object contains a value at the key and will return false if not.
+ - Your method does not need to accept the additional path parameter; we will only check for unnested values.
+
+#### Ideate
+Let’s come up with a game plan for implementing this method
+
+ - Add the .has() method to the lodash object including the appropriate parameters.
+ - Access the current value at the specified key in the object.
+ - Check to see if the value at that key is undefined.
+ - Return false if the value is undefined and true if not.
+
+#### Implement
+Let’s implement our game plan in code.
+
+ - Add a method to our _ object called has.
+ - Add two parameters to this method: object and key.
+ - Within the method, create a variable called hasValue and set its value equal to the result of checking to see if the current value of object at key does not equal undefined.
+ - Return the value of hasValue from the method.
+
+#### Test
+To test that our .has() method works as expected, run node test/has.js in your terminal.
+
+### 6 - Implement _.invert()
+
+#### Specify
+
+Here is a summary of what your method should do:
+
+ - .invert() takes one argument: an object.
+ - .invert() iterates through each key / value pair in the provided object and swaps the key and value.
+ - In the case of duplicate values in the object, subsequent values will overwrite property assignments of previous values.
+
+
+#### Ideate
+Let’s come up with a game plan for implementing this method.
+
+ - Add the .invert() method to the lodash object including the appropriate parameters.
+ - Create a new object to represent our inverted object.
+ - Iterate through each key in the provided object.
+ - Set the original object’s value at that key to be a key on our inverted object and set the value of that key to be the original object’s key.
+ - Return the inverted object.
+
+#### Implement
+Let’s implement our game plan in code.
+
+ - Add a method to our _ object called invert.
+ - Add one parameter to this method: object.
+ - Within the method, create a variable called invertedObject and set its value equal to an empty object.
+ - Using a for ... in loop, iterate through each key in object.
+ - Within the loop, create a variable called originalValue and set it equal to the value at the current key in object.
+ - Still within the loop, set the value at originalValue on invertedObject to be the current key.
+ - Finally, outside of the loop, return the value of invertedObject from the method.
+
+#### Test
+To test that our .invert() method works as expected, run node test/invert.js in your terminal.
