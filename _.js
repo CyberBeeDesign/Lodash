@@ -41,9 +41,28 @@ const _ = {
         return paddedString;
     },
 
+    //has()
+    has(object, key) {
+        const hasValue = object[key] !== undefined;
+        return hasValue;
+    },
+
+    //Invert()
+    invert(object) {
+        const invertedObject = {};
+        for(let key in object) {
+            const originalValue = object[key];
+            invertedObject[originalValue] = key;
+        }
+        return invertedObject;
+    }
+
+    
+
 }
 
-
+//Object variable for has(), invert();
+const object = {'Kamel': 1, "Alissya": 2, "Aylan": 3};
 
 
 /*TEST*/
@@ -52,6 +71,8 @@ const _ = {
 //console.log(_.inRange(.10, 20, 30))
 //console.log(_.words('The quick brown fox jumps over the lazy dog.'));
 //console.log(_.pad('Kamel', 35))
+//console.log(_.has(object, 'Kamel'))
+//console.log(_.invert(object))
 
 
 
