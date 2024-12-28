@@ -135,3 +135,31 @@ Let’s implement our game plan in code.
 
 #### Test 
 To test that our .pad() method works as expected, run node test/pad.js in your terminal. 
+
+### Implement _.has()
+
+#### Specify 
+Here is a summary of what your method should do:
+ - .has() takes two arguments: an object and a key.
+ - .has() checks to see if the provided object contains a value at the specified key.
+ - .has() will return true if the object contains a value at the key and will return false if not.
+ - Your method does not need to accept the additional path parameter; we will only check for unnested values.
+
+#### Ideate
+Let’s come up with a game plan for implementing this method
+
+ - Add the .has() method to the lodash object including the appropriate parameters.
+ - Access the current value at the specified key in the object.
+ - Check to see if the value at that key is undefined.
+ - Return false if the value is undefined and true if not.
+
+#### Implement
+Let’s implement our game plan in code.
+
+ - Add a method to our _ object called has.
+ - Add two parameters to this method: object and key.
+ - Within the method, create a variable called hasValue and set its value equal to the result of checking to see if the current value of object at key does not equal undefined.
+ - Return the value of hasValue from the method.
+
+#### Test
+To test that our .has() method works as expected, run node test/has.js in your terminal.
