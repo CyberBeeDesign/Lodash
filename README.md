@@ -197,3 +197,40 @@ Let’s implement our game plan in code.
 
 #### Test
 To test that our .invert() method works as expected, run node test/invert.js in your terminal.
+
+### Implement _.findKey()
+
+#### Specify 
+Here is a summary of what your method should do:
+
+ - .findKey() takes two arguments: an object and a predicate function — a function that returns a boolean value.
+ - .findKey() iterates through each key / value pair in the provided object and calls the predicate function with the value.
+ - .findKey() returns the first key that has a value that returns a truthy value from the predicate function.
+ - .findKey() returns undefined if no values return truthy values from the predicate function.
+
+#### Ideate 
+Let’s come up with a game plan for implementing this method.
+
+ - Add the .findKey() method to the lodash object including the appropriate parameters.
+ - Iterate through each key in the provided object.
+ - Within a conditional if statement, call the provided predicate function with the value at that key.
+ - If the predicate function returns a truthy value, return the current key from the method.
+ - After the loop, return undefined, since no values returned a truthy value from the predicate function.
+
+#### Implement 
+Let’s implement our game plan in code.
+
+ - Add a method to our _ object called findKey.
+ - Add two parameters to this method: object and predicate. We will name our predicate function parameter predicate since this is the name used in the Lodash documentation.
+ - Within the method, use a for ... in loop to iterate through each key in object.
+ - Within the loop, create a variable called value and set it equal to the value at the current key in object.
+ - Still within the loop, create another variable called predicateReturnValue and set it equal to the result of calling predicate with value.
+ - Finally, still within the loop, use an if statement to check to see if predicateReturnValue is truthy. If it is, return the current key from the method.
+ - Outside of the loop, return undefined to address all cases where no truthy values were returned from predicate.
+
+#### Test
+To test that our .findKey() method works as expected, run node test/find-key.js in your terminal. 
+
+Congratulations, you’ve implemented all of the object methods! These are starting to get a little tricky. If you’re feeling overwhelmed at all, that’s normal. Just keep tackling these problems one at a time, and you’ll soon find that you’ll be able to tackle problems like these faster and faster.
+
+When you’re ready, move on to the next method.
