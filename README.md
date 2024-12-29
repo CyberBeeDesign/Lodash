@@ -198,7 +198,7 @@ Let’s implement our game plan in code.
 #### Test
 To test that our .invert() method works as expected, run node test/invert.js in your terminal.
 
-### Implement _.findKey()
+### 7 - Implement _.findKey()
 
 #### Specify 
 Here is a summary of what your method should do:
