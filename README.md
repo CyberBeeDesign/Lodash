@@ -233,4 +233,33 @@ To test that our .findKey() method works as expected, run node test/find-key.js 
 
 Congratulations, you’ve implemented all of the object methods! These are starting to get a little tricky. If you’re feeling overwhelmed at all, that’s normal. Just keep tackling these problems one at a time, and you’ll soon find that you’ll be able to tackle problems like these faster and faster.
 
-When you’re ready, move on to the next method.
+### 8 - Implement _.drop()
+
+#### Specify
+
+Here is a summary of what your method should do:
+
+ - .drop() takes two arguments: an array and a number representing the number of items to drop from the beginning of the array.
+ - .drop() returns a new array which contains the elements from the original array, excluding the specified number of elements from the beginning of the array.
+ - If the number of elements to drop is unspecified, your method should drop one element.
+
+#### Ideate
+Let’s come up with a game plan for implementing this method.
+
+ - Add the .drop() method to the lodash object including the appropriate parameters.
+ - Check to see if the number of items to drop was set. If not, set the number equal to 1.
+ - Create a new copy of the original array with the specified number of elements dropped from the beginning of the array. We will use the array .slice() method to accomplish this.
+ - Return the modified copy of the array from the method.
+   
+#### Implement 
+Let’s implement our game plan in code.
+
+ - Add a method to our _ object called drop.
+ - Add two parameters to this method: array and n.
+ - Within the method, use an if statement to check if n has been set by asking if n is equal to undefined.
+ - Within the if statement block, set n equal to 1.
+ - Outside of the if statement, create a new variable called droppedArray and set its value to be a copy of the array missing the first n elements by using .slice().
+ - Return droppedArray from the method.
+
+#### Test
+To test that our .drop() method works as expected, run node test/drop.js in your terminal. 
