@@ -67,13 +67,45 @@ const _ = {
             } 
         }
         return undefined
+    },
+
+    //drop()
+    drop(array, n) {
+        if(n === undefined) {
+            n = 1;
+        }
+        const droppedArray = array.slice(n);
+        return droppedArray;
+    },
+
+    //dropWhile()
+    dropWhile(array, predicate) {
+        const dropNumber = array.findIndex((element, index) => {
+            return !predicate(element, index, array);
+        })
+        const droppedArray = this.drop(array, dropNumber);
+        return droppedArray;
+    },
+
+    //chunk()
+    chunk(array, size) {
+        if(size === undefined) {
+            size = 1;
+        }
+        const arrayChunks = [];
+        for (let i = 0; i < array.length; i += size){
+            const arrayChunk = array.slice(i, i + size);
+            arrayChunks.push(arrayChunk);
+          }
+          return arrayChunks;
     }
 }
 
-//Object variable for has(), invert();
-const object = {'Kamel': 1, "Alissya": 2, "Aylan": 3};
-const predicate = (value) => value > 0;
 
+const object = {'Kamel': 1, "Alissya": 2, "Aylan": 3};
+const predicate = (value) => array.indexOf(value) < array.indexOf('Saturday');
+const array = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+;
 
 /*TEST*/
 
@@ -84,6 +116,9 @@ const predicate = (value) => value > 0;
 //console.log(_.has(object, 'Kamel'))
 //console.log(_.invert(object))
 //console.log(_.findKey(object, predicate))
+//console.log(_.drop(array, 5));
+//console.log(_.dropWhile(array, predicate));
+//console.log(_.chunk(array, 3));
 
 
 
