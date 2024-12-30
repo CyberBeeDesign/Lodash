@@ -262,4 +262,37 @@ Let’s implement our game plan in code.
  - Return droppedArray from the method.
 
 #### Test
-To test that our .drop() method works as expected, run node test/drop.js in your terminal. 
+To test that our .drop() method works as expected, run node test/drop.js in your terminal.
+
+### 9 - Implement _.dropWhile()
+
+#### Specify
+
+Here is a summary of what your method should do:
+
+ - .dropWhile() takes two arguments: an array and a predicate function.
+ - The supplied predicate function takes three arguments: the current element, the current element index, and the whole array.
+ - .dropWhile() creates a new copy of the supplied array, dropping elements from the beginning of the array until an element causes the predicate function to return a falsy value.
+
+
+#### Ideate
+
+ - Add the .dropWhile() method to the lodash object including the appropriate parameters.
+ - Iterate through the array until you find an element that causes the predicate to return a falsy value. We will use .findIndex() to iterate through the array since it is built to iterate through an array until it finds an element that returns a specific value.
+ - Use our previous .drop() method to drop the elements prior to the one that returned a falsy value.
+ - Return the modified copy of the array from the method.
+
+#### Implement
+
+ - Add a method to our _ object called dropWhile.
+ - Add two parameters to this method: array and predicate.
+ - Within the method, create a new variable called dropNumber and set its value equal to the return value of a call to findIndex on array.
+ - Pass an anonymous callback function to findIndex that takes two arguments: element and index.
+ - Within the callback function, return the negated return value of predicate called with element, index, and array. We negate the value (use !) since we are looking to drop elements until the predicate returns a falsy value. However, .findIndex() is looking for the first truthy value. So, we make every truthy value falsy and vice versa to get the value we are looking for.
+ - After the entire dropNumber declaration, create a new variable called droppedArray and set its value to the return value of this.drop() called with array and dropNumber. We are using this since .drop() is a method on the _ object which is the current object we are working from, and therefore the current value of this. Calling _.drop() would also have worked but is a less common practice.
+ - Return droppedArray from the method.
+
+#### Test
+To test that our .dropWhile() method works as expected, run node test/drop-while.js in your terminal. 
+
+
